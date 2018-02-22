@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        facebookView.loadUrl("https://www.twitter.com");
+        facebookView.loadUrl("https://www.facebook.com");
 
 
     }
