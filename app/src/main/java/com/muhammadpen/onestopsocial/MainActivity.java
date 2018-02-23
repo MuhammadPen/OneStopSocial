@@ -62,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Adding web adresses
-        facebookView.loadUrl("https://www.m.facebook.com");
-        twitterView.loadUrl("https://www.m.twitter.com");
+        facebookView.loadUrl("https://www.facebook.com");
+        twitterView.loadUrl("https://www.twitter.com");
         facebookView.loadUrl("https://www.flickr.com");
 
 
