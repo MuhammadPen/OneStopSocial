@@ -7,9 +7,25 @@
     tools:context="com.muhammadpen.onestopsocial.MainActivity">
 
     <WebView
+        android:id="@+id/flickrView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <WebView
+        android:id="@+id/twitterView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <WebView
         android:id="@+id/facebookView"
         android:layout_width="match_parent"
-        android:layout_height="465"
+        android:layout_height="match_parent"
         android:layout_marginTop="52dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -18,9 +34,31 @@
         android:id="@+id/facebookButton"
         android:layout_width="127dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimary"
+        android:backgroundTint="@color/facebookColo"
         android:text="Facebook"
         android:textColor="@android:color/background_light"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="3dp" />
+        app:layout_constraintBottom_toTopOf="@+id/facebookView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/TwitterButton"
+        android:layout_width="131dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:text="Twitter"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/facebookView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/flickrButton"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="260dp"
+        android:backgroundTint="@color/flickrButton"
+        android:text="Flickr"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/facebookView"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

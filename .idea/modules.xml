@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OneStopSocial.iml" filepath="$PROJECT_DIR$/OneStopSocial.iml" />
+      <module fileurl="file://C:\Users\Lenovo\Documents\GitHub\OneStopSocial\OneStopSocial.iml" filepath="C:\Users\Lenovo\Documents\GitHub\OneStopSocial\OneStopSocial.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Lenovo\Documents\GitHub\OneStopSocial\app\app.iml" filepath="C:\Users\Lenovo\Documents\GitHub\OneStopSocial\app\app.iml" />
     </modules>
   </component>
 </project>
