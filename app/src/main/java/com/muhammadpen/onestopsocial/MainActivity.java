@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         flickrView.setTranslationX(2000);
 
 
+
+
          facebookButton.setOnClickListener(new View.OnClickListener(){
              @Override
              public void onClick(View view) {
@@ -111,8 +113,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Changing facebookView Settings
-        facebookView.setWebChromeClient(new WebChromeClient());
-        facebookView.setWebViewClient(new WebViewClient());
+       facebookView.setWebViewClient(new CustomWebView());
+        facebookView.getSettings().setDomStorageEnabled(true);
         facebookView.setVerticalScrollBarEnabled(false);
         facebookView.setHorizontalScrollBarEnabled(false);
         facebookView.getSettings().setJavaScriptEnabled(true);
@@ -122,8 +124,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Changing twitterView Settings
-        twitterView.setWebChromeClient(new WebChromeClient());
-        twitterView.setWebViewClient(new WebViewClient());
+        twitterView.setWebViewClient(new CustomWebView());
+        twitterView.getSettings().setDomStorageEnabled(true);
         twitterView.setVerticalScrollBarEnabled(false);
         twitterView.setHorizontalScrollBarEnabled(false);
         twitterView.getSettings().setJavaScriptEnabled(true);
@@ -132,8 +134,8 @@ public class MainActivity extends AppCompatActivity {
         twitterView.getSettings().setMediaPlaybackRequiresUserGesture(false);
 
         //Changing flickrView Settings
-        flickrView.setWebChromeClient(new WebChromeClient());
-        flickrView.setWebViewClient(new WebViewClient());
+        flickrView.setWebViewClient(new CustomWebView());
+        flickrView.getSettings().setDomStorageEnabled(true);
         flickrView.setVerticalScrollBarEnabled(false);
         flickrView.setHorizontalScrollBarEnabled(false);
         flickrView.getSettings().setJavaScriptEnabled(true);
@@ -150,6 +152,15 @@ public class MainActivity extends AppCompatActivity {
         flickrView.loadUrl("https://www.flickr.com");
 
 
+    }
+
+    @Override
+    public void onBackPressed(){
+        if(facebookView.canGoBack()){
+            facebookView.goBack();
+        }else{
+            super.onBackPressed();
+        }
     }
 
 }
