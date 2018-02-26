@@ -1,6 +1,6 @@
 package com.muhammadpen.onestopsocial;
 
-import android.media.Image;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +9,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
-import android.widget.ImageView;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         twitterView= (WebView) findViewById(R.id.twitterView);
         flickrView = (WebView) findViewById(R.id.flickrView);
 
+        //Initially moving the views out of the user FOV
          facebookView.setTranslationX(-1500);
         twitterView.setTranslationX(1500);
         flickrView.setTranslationX(2000);
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        //setting up button listeners
          facebookButton.setOnClickListener(new View.OnClickListener(){
              @Override
              public void onClick(View view) {
@@ -102,15 +104,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        /*
-        //Setting up WebViews
-        facebookView = (WebView) findViewById(R.id.facebookView);
-        twitterView = (WebView) findViewById(R.id.twitterView);
-        flickrView = (WebView) findViewById(R.id.flickrView);
-        */
-
-
-
 
         //Changing facebookView Settings
        facebookView.setWebViewClient(new CustomWebView());
@@ -154,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Adding back functionality
     @Override
     public void onBackPressed(){
         if(facebookView.canGoBack()){
