@@ -103,10 +103,10 @@ public class MainActivity extends AppCompatActivity {
          });
 
 
-
+            CustomWebView myWebView = new CustomWebView();
 
         //Changing facebookView Settings
-       facebookView.setWebViewClient(new CustomWebView());
+       facebookView.setWebViewClient(myWebView);
         facebookView.getSettings().setDomStorageEnabled(true);
         facebookView.setVerticalScrollBarEnabled(false);
         facebookView.setHorizontalScrollBarEnabled(false);
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Changing twitterView Settings
-        twitterView.setWebViewClient(new CustomWebView());
+        twitterView.setWebViewClient(myWebView);
         twitterView.getSettings().setDomStorageEnabled(true);
         twitterView.setVerticalScrollBarEnabled(false);
         twitterView.setHorizontalScrollBarEnabled(false);
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
         twitterView.getSettings().setMediaPlaybackRequiresUserGesture(false);
 
         //Changing flickrView Settings
-        flickrView.setWebViewClient(new CustomWebView());
+        flickrView.setWebViewClient(myWebView);
         flickrView.getSettings().setDomStorageEnabled(true);
         flickrView.setVerticalScrollBarEnabled(false);
         flickrView.setHorizontalScrollBarEnabled(false);
