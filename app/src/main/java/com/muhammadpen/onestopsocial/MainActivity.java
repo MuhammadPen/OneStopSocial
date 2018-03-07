@@ -4,8 +4,10 @@ package com.muhammadpen.onestopsocial;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 
 
@@ -142,9 +144,17 @@ public class MainActivity extends AppCompatActivity {
         twitterView.loadUrl("https://www.twitter.com");
         flickrView.loadUrl("https://www.flickr.com");
 
-        BackFunction backFunction = new BackFunction();
-        backFunction.onBackPressed();
 
+    }
+
+    //Adding back functionality
+    @Override
+    public void onBackPressed(){
+        if(facebookView.canGoBack()){
+            facebookView.goBack();
+        }else{
+            super.onBackPressed();
+        }
     }
 
 }
