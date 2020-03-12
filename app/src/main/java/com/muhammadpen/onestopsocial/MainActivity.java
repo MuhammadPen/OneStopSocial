@@ -25,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
     Button facebookButton;
     Button twitterButton;
     Button flickrButton;
+    //ImageView facebookView;
+    //ImageView twitterView;
+    //ImageView flickrView;
+
+
 
 
     @Override
